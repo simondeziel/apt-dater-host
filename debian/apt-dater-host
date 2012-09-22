@@ -28,7 +28,6 @@
 use AptPkg::Config '$_config';
 use AptPkg::System '$_system';
 use AptPkg::Cache;
-use ImVirt;
 use strict;
 use warnings;
 
@@ -124,7 +123,12 @@ sub do_refresh() {
 }
 
 sub get_virt() {
-    return imv_get(IMV_PROB_DEFAULT);
+    return "Unknown" unless (-x '/usr/bin/imvirt');
+
+    my $imvirt;
+    chomp($imvirt = `/usr/bin/imvirt`);
+
+    return $imvirt;
 }
 
 sub get_uname() {
