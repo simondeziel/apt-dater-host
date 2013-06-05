@@ -1,7 +1,7 @@
 apt-dater-host (0.9.1-adp0.6) unstable; urgency=low
 
   * Detect new Debian distro kernels correctly.
-    (Closes Debian Bug#697330 by Timo Weingärtner)
+    (Closes Debian Bug#697330 by Time Weingärtner)
 
  -- Thomas Liske <liske@ibh.de>  
 
